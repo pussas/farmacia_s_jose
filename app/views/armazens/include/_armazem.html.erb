@@ -1,0 +1,17 @@
+
+<tr>    
+    <!-- DESIGNACAO E TELEFONE -->
+    <td>
+      <span id="span_designacao_armazem_<%= "#{armazem.id}" %>">
+        <%= armazem.designacao %>
+      </span>
+
+      <% if armazem.telefone %>
+        <h4><%= format_phone(armazem.telefone) %></h4>
+      <% end %>
+    </td>
+  
+    <td><%= link_to t('links.detalhes'), armazem %></td>
+    <td><%= link_to t('links.editar.html'), edit_armazem_path(armazem), :class => 'btn' %></td>
+    <td><%= link_to t('links.eliminar.html'), armazem, id: "link_eliminar_armazem_#{armazem.id}", :class => 'btn btn-danger' %></td>
+</tr>

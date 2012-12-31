@@ -1,0 +1,24 @@
+<table class="table table-striped table-condensed">
+  <tr>
+    <th><%= sortable 'designacao', t('.coluna_designacao') %> </th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+  <%= render(:partial => "armazens/include/armazem", :collection => @armazens) %>
+</table>
+
+
+<div id="ecra_modal_eliminar" class="modal hide fade" style="display: none;">
+  <div class="modal-header">
+    <h3> <%= t('.confirmar_operacao') %> </h3>
+  </div>
+  <div class="modal-body">
+    <p><%= t('.mensagem_confirmar_eliminacao_html')  %> </p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" data-dismiss="modal">cancelar</a>&nbsp;&nbsp;&nbsp;
+    <%= link_to t('links.eliminar.html'), armazens_path, id: "link_modal_eliminar_armazem", method: :delete, class: 'btn btn-danger' %>
+  </div>
+</div>

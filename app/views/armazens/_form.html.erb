@@ -1,0 +1,32 @@
+<div class="well">
+
+  <%= form_for @armazem, :html => { :class => 'form-horizontal' } do |f| %>
+  
+    <!-- MENSAGENS DE ERRO --!>
+    <%= render '/shared/error_messages', :target => @armazem %>
+    
+    <fieldset>
+    
+        <%= is_form_attribute_with_error?(@armazem.errors[:designacao].any?, class: 'control-group') do %>
+          <%= f.label :designacao, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :designacao, :class => 'text_field' %>
+          </div>
+        <% end %>
+    
+         <%= is_form_attribute_with_error?(@armazem.errors[:telefone].any?, class: 'control-group') do %>
+          <%= f.label :telefone, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.telephone_field :telefone, :class => 'text_field' %>
+          </div>
+        <% end %>
+      
+        <%= create_form_buttons(@armazem.new_record?, armazens_path) %>
+        
+        <!-- IMAGEM ILUSTRATIVA DE PROGRESSO --!>
+        <%= render '/shared/div_loading' %>
+    
+    </fieldset>
+  <% end %>
+</div>
+      

@@ -1,0 +1,22 @@
+pt:
+  sidebar:
+    menu_configuracoes: "Configurações"
+    link_estados_pagamentos: "Estados pagamentos"
+    link_estados_encomendas: "Estados encomendas"
+    link_armazens: "Armazéns"
+  header:
+    designacao_farmacia: "Farmácia São José"
+    link_login: "Login"
+    link_login_html: <i class="icon-user icon-white"></i>&nbsp;Login
+  links:
+    detalhes: "detalhes"
+    editar:
+      html: <i class="icon-pencil"></i>&nbsp;editar
+    eliminar: 
+      html: <i class="icon-trash icon-white"></i>&nbsp;eliminar
+    voltar: "voltar"
+    cancelar: "cancelar"
+  erros:
+    atencao: "Atenção!"
+  loading:
+    mensagem: "Por favor aguarde enquanto o seu pedido é processado..."

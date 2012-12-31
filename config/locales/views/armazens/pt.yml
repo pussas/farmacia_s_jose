@@ -1,0 +1,15 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt:
+  armazens:
+    title: "Armazéns"
+    title_adicionar: "Adicionar Armazém"
+    title_editar: "Editar Armazém"
+    index:
+      sem_armazens_definidos: "Não existem armazéns registados no sistema"
+    include:
+      tabela_armazem:
+        coluna_designacao: "Designação"
+        confirmar_operacao: "Confirmar operação"
+        mensagem_confirmar_eliminacao_html: Deseja mesmo eliminar o armazém <b><span id="span_designacao_armazem_eliminar"></span></b>?

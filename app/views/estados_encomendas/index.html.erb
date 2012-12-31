@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1>Estados das encomendas</h1>
+</div>
+
+<table class="table table-striped table-condensed">
+  <tr>
+    <th>Estado</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @estados_encomendas.each do |estados_encomenda| %>
+    <tr>
+      <td><%= estados_encomenda.estado %></td>
+      <td><%= link_to 'detalhes', estados_encomenda %></td>
+      <td><%= link_to '<i class="icon-pencil"></i>&nbsp;editar'.html_safe, edit_estados_encomenda_path(estados_encomenda), :class => 'btn' %></td>
+      <td><%= link_to '<i class="icon-trash icon-white"></i>&nbsp;eliminar'.html_safe, estados_encomenda, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+<br />
+
+<%= link_to 'Adicionar', new_estados_encomenda_path, :class => 'btn btn-primary' %>

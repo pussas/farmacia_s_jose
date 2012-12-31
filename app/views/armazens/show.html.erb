@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Designacao:</b>
+  <%= @armazem.designacao %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @armazem.telefone %>
+</p>
+
+
+<%= link_to 'Edit', edit_armazem_path(@armazem) %> |
+<%= link_to 'Back', armazens_path %>

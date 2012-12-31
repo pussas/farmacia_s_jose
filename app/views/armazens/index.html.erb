@@ -1,0 +1,19 @@
+<% if flash[:success] %><div class="alert alert-success"><%= flash[:success].html_safe %></div><% end %>
+<% if flash[:error] %><div class="alert alert-error"><%= flash[:error] %></div><% end %>
+
+<div class="page-header">
+  <h1><%= t('armazens.title') %></h1>
+</div>
+
+<%= render("armazens/include/tabela_armazem") unless @armazens.empty? %>
+
+<% if @armazens.empty? %>
+  <div class="well">
+    <%= t('.sem_armazens_definidos') %>
+  </div>
+<% end %>
+
+<br/>
+
+
+<%= link_to 'Adicionar', new_armazem_path, :class => 'btn btn-primary' %>

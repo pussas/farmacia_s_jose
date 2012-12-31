@@ -1,0 +1,26 @@
+<% if target.errors.any? %>
+  
+  <div id="error_explanation">
+  
+    <div class="container-fluid">
+		  <div class="row-fluid">
+		  
+			  <div class="span8">
+          <div class="alert alert-error">  
+            <!-- <h4 class="alert-heading"> <%= t('erros.atencao') %> </h4> <br/> -->
+            
+            <p><%=t 'errors.template.body', :count => target.errors.count, :model => target.class.model_name.human  %></p>
+            
+            <ul>
+            	<% target.errors.keys.each do |attribute| %>
+          			<li><%= t("activerecord.attributes.armazem.#{attribute}") %></li>
+          		<% end %>
+          	</ul>
+          	
+          </div>
+			  </div>		
+    	</div>
+    </div>
+    
+  </div>
+<% end %>

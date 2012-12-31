@@ -1,0 +1,20 @@
+<div class="well">
+	<ul class="nav nav-list">
+	
+		<li class="nav-header"><%= t 'sidebar.menu_configuracoes' %></li>
+	
+		<%= is_active?('estados_pagamentos') do %>
+			<%= link_to t('sidebar.link_estados_pagamentos'), estados_pagamentos_path %>
+		<% end %>
+	
+		<%= is_active?('estados_encomendas') do %>
+			<%= link_to t('sidebar.link_estados_encomendas'), estados_encomendas_path %>
+		<% end %>
+		
+		<%= is_active?('armazens') do %>
+			<%= link_to t('sidebar.link_armazens'), armazens_path %>
+		<% end %>
+	
+		<li class="divider"></li>
+	</ul>
+</div>

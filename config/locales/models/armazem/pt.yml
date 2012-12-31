@@ -1,0 +1,21 @@
+pt:      
+  activerecord:
+    models:
+      armazem: "armazém"
+    attributes:
+      armazem:
+        designacao: "Designação"
+        telefone: "Telefone"
+    errors:
+      models:
+        armazem:
+          attributes:
+            designacao:
+              blank: "O campo designação é de preenchimento obrigatório"
+              taken: "Essa designação já se encontra atribuída a outro armazém"
+              too_long: "O valor introduzido no campo designação é demasiado grande (o máximo é de %{count} caracteres)"
+              too_short: "O valor introduzido no campo designação é demasiado pequeno (o mínimo é de %{count} caracteres)"
+            telefone:
+              invalid: "O número de telefone introduzido é inválido (tem de ter exactamente 9 dígitos)"
+              wrong_length: "O número de telefone introduzido é inválido (tem de ter exactamente 9 dígitos)"
+              not_a_number: "O número de telefone introduzido é inválido"
